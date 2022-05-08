@@ -15,18 +15,22 @@ struct ContentView: View {
     var body: some View {
         
         ZStack {
+            
             // SEE: https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-views-in-a-loop-using-foreach
             ForEach(1...3, id: \.self) { currentValue in
                 FoodView(foodImageName: "apple",
                          delayTimeInSeconds: currentValue * 3)
             }
+            
             ForEach(1...3, id: \.self) { currentValue in
                 FoodView(foodImageName: "eggplant",
                          delayTimeInSeconds: currentValue * 3)
             }
+            
         }
         
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
