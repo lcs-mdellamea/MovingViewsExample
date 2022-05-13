@@ -15,24 +15,29 @@ struct TaskBarView: View {
         
         VStack {
             
-            ForEach(categories) { category in
+            List {
                 
-                ZStack {
-                    Rectangle()
-                        .frame(width: 50, height: 50)
-                    if category.isChecked {
-                        
-                        Image(systemName:"checkmark")
+                ForEach(categories) { category in
+                    
+                    ZStack {
+                        Image(systemName:"square")
                             .resizable()
-                            .frame(width: 40, height: 40)
+                            .frame(width: 30, height: 30)
+                        
+                        if category.isChecked {
+                            
+                            Image(systemName:"checkmark")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                            
+                        }
                         
                     }
-                    
+                    Text(category.name)
+                        .font(.title2)
                 }
-                Text(category.name)
-                    .font(.title2)
+                
             }
-            
         }
         
         
@@ -41,6 +46,6 @@ struct TaskBarView: View {
 
 struct TaskBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskBarView()
+        TaskBarView(categories: [Category(name: "Veggies", isChecked: false, quantityRemaining: 5), Category(name: "Carbs", isChecked: false, quantityRemaining: 3)])
     }
 }

@@ -19,45 +19,50 @@ struct ContentView: View {
     // MARK: Computed properties
     var body: some View {
         
-        HStack {
-        
-        ZStack {
+        GeometryReader { geo in
             
-            // SEE: https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-views-in-a-loop-using-foreach
-            
-            ForEach(1...3, id: \.self) { currentValue in
-                FoodView(foodImageName: "apple",
-                         delayTimeInSeconds: currentValue * 3, isActive: $isActive)
+            HStack {
+                
+                ZStack {
+                    
+                    // SEE: https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-views-in-a-loop-using-foreach
+                    
+                    ForEach(1...3, id: \.self) { currentValue in
+                        FoodView(foodImageName: "apple",
+                                 delayTimeInSeconds: currentValue * 3, isActive: $isActive)
+                    }
+                    
+                    ForEach(1...3, id: \.self) { currentValue in
+                        FoodView(foodImageName: "eggplant",
+                                 delayTimeInSeconds: currentValue * 3, isActive: $isActive)
+                    }
+                    
+                    ForEach(1...3, id: \.self) { currentValue in
+                        FoodView(foodImageName: "carrot",
+                                 delayTimeInSeconds: currentValue * 3, isActive: $isActive)
+                    }
+                    
+                }
+                .frame(width: geo.size.width * 0.8)
+                
+                TaskBarView(categories: categories)
+                    .frame(width: geo.size.width * 0.2)
+                
             }
-            
-            ForEach(1...3, id: \.self) { currentValue in
-                FoodView(foodImageName: "eggplant",
-                         delayTimeInSeconds: currentValue * 3, isActive: $isActive)
-            }
-            
-            ForEach(1...3, id: \.self) { currentValue in
-                FoodView(foodImageName: "carrot",
-                         delayTimeInSeconds: currentValue * 3, isActive: $isActive)
-            }
-            
         }
-            
-            TaskBarView(categories: categories)
-            
-        }
         
-//        .background(Image("landscape")
-//                        .resizable())
-//        .frame(width: 2100, height: 1100)
+        //        .background(Image("landscape")
+        //                        .resizable())
+        //        .frame(width: 2100, height: 1100)
         
     }
-        
+    
     
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-.previewInterfaceOrientation(.landscapeLeft)
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

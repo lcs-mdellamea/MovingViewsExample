@@ -21,7 +21,7 @@ struct FoodView: View {
     @State var timer = Timer.publish(every: 1.0, on: .main, in: .common)
     
     // Starting vertical offset for the image
-    @State var yOffset = -150.0
+    @State var yOffset = Double.random(in: -900...(-200))
     
     // Start horizontal offset for the image (random)
     @State var xOffset = Double.random(in: -200...200)
