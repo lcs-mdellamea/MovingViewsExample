@@ -52,6 +52,7 @@ struct FoodView: View {
             }
             .onTapGesture {
                 print("\(foodImageName) was tapped.")
+                
             }
             // Runs once when the view is loaded
             .task {
