@@ -14,7 +14,7 @@ struct ContentView: View {
     // Is game running?
     @State var isActive = true
     
-    let categories = [Category(name: "Veggies", isChecked: false, quantityRemaining: 5), Category(name: "Carbs", isChecked: false, quantityRemaining: 3)]
+    let categories = [Category(name: "Veggies", isChecked: false, quantityRemaining: 5), Category(name: "Carbs", isChecked: true, quantityRemaining: 3)]
     
     // MARK: Computed properties
     var body: some View {
