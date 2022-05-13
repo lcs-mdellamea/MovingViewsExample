@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0C2942D9282EC4A400018F2A /* TaskBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2942D8282EC4A400018F2A /* TaskBarView.swift */; };
-		0C2942DB282EC4C000018F2A /* TopTaskBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2942DA282EC4C000018F2A /* TopTaskBarView.swift */; };
 		0C2942DD282EC6D700018F2A /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2942DC282EC6D700018F2A /* CategoryView.swift */; };
 		81C072E92827FAFE004235B4 /* MovingViewsExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C072E82827FAFE004235B4 /* MovingViewsExampleApp.swift */; };
 		81C072EB2827FAFE004235B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C072EA2827FAFE004235B4 /* ContentView.swift */; };
@@ -19,7 +18,6 @@
 
 /* Begin PBXFileReference section */
 		0C2942D8282EC4A400018F2A /* TaskBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBarView.swift; sourceTree = "<group>"; };
-		0C2942DA282EC4C000018F2A /* TopTaskBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTaskBarView.swift; sourceTree = "<group>"; };
 		0C2942DC282EC6D700018F2A /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		81C072E52827FAFE004235B4 /* MovingViewsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovingViewsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C072E82827FAFE004235B4 /* MovingViewsExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingViewsExampleApp.swift; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 				81C072F62827FDD9004235B4 /* Helpers */,
 				81C072EA2827FAFE004235B4 /* ContentView.swift */,
 				0C2942D8282EC4A400018F2A /* TaskBarView.swift */,
-				0C2942DA282EC4C000018F2A /* TopTaskBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,7 +166,6 @@
 				81C072EB2827FAFE004235B4 /* ContentView.swift in Sources */,
 				81C072E92827FAFE004235B4 /* MovingViewsExampleApp.swift in Sources */,
 				0C2942D9282EC4A400018F2A /* TaskBarView.swift in Sources */,
-				0C2942DB282EC4C000018F2A /* TopTaskBarView.swift in Sources */,
 				0C2942DD282EC6D700018F2A /* CategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
