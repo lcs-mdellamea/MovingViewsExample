@@ -46,7 +46,7 @@ struct ContentView: View {
                 .frame(width: geo.size.width * 0.8)
                 
                 TaskBarView(categories: categories)
-                    .frame(width: geo.size.width * 0.2)
+                    .frame(width: geo.size.width * 0.3)
                 
             }
         }
