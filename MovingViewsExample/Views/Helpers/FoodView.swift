@@ -21,10 +21,13 @@ struct FoodView: View {
     @State var timer = Timer.publish(every: 1.0, on: .main, in: .common)
     
     // Starting vertical offset for the image
-    @State var yOffset = -200.0
+    @State var yOffset = -150.0
     
     // Start horizontal offset for the image (random)
     @State var xOffset = Double.random(in: -200...200)
+    
+    // Is this animation active?
+    @Binding var isActive: Bool
 
     // MARK: Computed properties
     var body: some View {
@@ -41,7 +44,9 @@ struct FoodView: View {
                     Animation
                         .linear(duration: 1.0)
                 ) {
-                    yOffset += 15.0
+                    if isActive == true {
+                        yOffset += 15.0
+                    }
                 }
                 
             }
@@ -71,6 +76,7 @@ struct FoodView: View {
 struct FoodView_Previews: PreviewProvider {
     static var previews: some View {
         FoodView(foodImageName: "eggplant",
-                 delayTimeInSeconds: 1)
+                 delayTimeInSeconds: 1, isActive: Binding.constant(false))
+                    .previewInterfaceOrientation(.landscapeLeft)
     }
 }
